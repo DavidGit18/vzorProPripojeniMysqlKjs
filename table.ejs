@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legia Foods</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Legia Foods</h1>
+    <table id="foodsTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Název</th>
+                <th>Původ</th>
+                <th>Cena</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% foods.forEach(food => { %>
+                <tr>
+                    <td><%= food.id_food %></td>
+                    <td><%= food.nazev %></td>
+                    <td><%= food.puvod %></td>
+                    <td><%= food.cena %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
